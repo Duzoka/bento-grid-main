@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'DMSans-Italic';
+    src: url('../fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DMSans';
+    src: url('..\fonts\DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 main {
     height: 100%;
 
@@ -6,11 +22,12 @@ main {
 }
 
 .grid-container {
-    width: 800px;
-    height: 600px;
+    max-width: 90%;
+    width: 900px;
+    height: auto;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 10px;
+    grid-template-columns: 0.6fr 2fr;
+    gap: 20px;
     padding: 5px;
     margin: 5px;
     background-color: gray;
@@ -18,15 +35,13 @@ main {
 }
 
 .side-left, .side-right {
-    background-color: #cdc9c9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-    background-color: #de0d0d;
     border-radius: 5px;
-    overflow: hidden;
+
 }
 
 img {
@@ -37,16 +52,38 @@ img {
 .side-left {
     min-height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.9fr;
     grid-template-rows: repeat(2, 1fr); 
-    gap: 5px;
-    padding: 10px;
+    gap: 25px;
+    font-family: 'DMSans-Italic';
+    line-height: 150%;
+    font-weight: 800;
 }
 
 .box1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
     background-color: hsl(31, 66%, 93%);
 
 }
+
+.box1 h2 span {
+    display: block;
+    color: hsl(256, 67%, 59%);
+}
+
+
+.box1 img {
+    width: 100%;
+    height: auto;
+}
+
+
 
 .box2, .box6 {
     background-color: hsl(39, 100%, 71%);
@@ -57,7 +94,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
-    gap: 5px;
+    gap: 25px;
     padding: 10px;
 }
 
